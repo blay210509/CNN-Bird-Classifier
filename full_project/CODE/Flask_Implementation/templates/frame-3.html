@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title></title>
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/global.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/frame-3.css')}}" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="frame-div2">
+      <button class="cta-button4" id="cTAButton">
+        <b class="label4">HOME</b></button
+      ><b class="team133-b2">#team133</b>
+      <div class="white-background-div1"></div>
+      
+      <div class = "res1_img">
+      <img src={{ img1 }} alt={{ name1 }} width="150" height="150">
+      </div>
+
+      <div class = "res1">
+      <p>
+      Species Name: <a href="{{wiki1}}">{{name1}}</a> ({{conf1}}% likely)<br><br>
+      Description: {{desc1}}<br><br>
+      </p> 
+    </div>
+
+    <div class = "res2_img">
+      <img src={{ img2 }} alt={{ name2 }} width="150" height="150">
+      </div>
+
+      <div class = "res2">
+        <p>
+        Species Name: <a href="{{wiki2}}">{{name2}}</a> ({{conf2}}% likely)<br><br>
+        Description: {{desc2}}<br><br>
+        </p> 
+      </div>
+
+    <div class = "res3_img">
+      <img src={{ img3 }} alt={{ name3 }} width="150" height="150">
+      </div>
+
+      <div class = "res3">
+        <p>
+        Species Name: <a href="{{wiki3}}">{{name3}}</a> ({{conf3}}% likely)<br><br>
+        Description: {{desc3}}<br><br>
+        </p> 
+      </div>
+
+      <button class="cta-button5" id="cTAButton1">
+        <b class="label5">TRY ANOTHER</b>
+      </button>
+      <div class="heading-upload1"><b class="result-b">Result</b></div>
+    </div>
+
+    <script>
+      var cTAButton = document.getElementById("cTAButton");
+      if (cTAButton) {
+        cTAButton.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var cTAButton1 = document.getElementById("cTAButton1");
+      if (cTAButton1) {
+        cTAButton1.addEventListener("click", function (e) {
+          window.location.href = "uploader";
+        });
+      }
+      </script>
+  </body>
+</html>

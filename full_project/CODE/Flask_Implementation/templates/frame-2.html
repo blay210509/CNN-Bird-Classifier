@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title></title>
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/global.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/frame-2.css')}}" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"
+    />
+    
+
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+		rel="stylesheet" type="text/css" />
+	  <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	  <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script src="{{ url_for('static', filename='upload.js') }}"></script>
+  
+  </head>
+  <body>
+    <div class="frame-div1">
+      <button class="cta-button2" id="cTAButton">
+        <b class="label2">HOME</b>
+      </button>
+      
+      <b class="team133-b1">#team133</b>
+      <div class="white-background-div"></div>
+      
+      <!-- <button class="cta-button3" id="cTAButton1">
+        <b class="label3">Upload Files</b>
+      </button> -->
+
+      <div class="heading-upload">
+        <b class="upload-b">Upload</b>
+      </div>
+
+      <!-- <input class="upload-file-area" type="file" required accept="image/*" /> -->
+      <form action="result" method="POST" enctype="multipart/form-data">
+        <input class = "upload-form" type='file' name='file' onchange="readURL(this);" />
+        <img class = "upload-image"  id="blah" src="#" alt="your image" />
+        <button class="cta-button3" id="cTAButton1" type = "submit">
+          <b class="label3">Upload Files</b>
+        </button>
+        </form>
+
+      <div class="upload-file-background"></div>
+      
+      <div class="supported-formats-div">
+        <div class="supported-formats-jpeg-jpg">
+          Supported formats: JPEG, JPG
+        </div>
+      </div>
+      <img class="upload-icon" alt="" src="static/public/upload-icon.svg" />
+    </div>
+
+    <script>
+      var cTAButton = document.getElementById("cTAButton");
+      if (cTAButton) {
+        cTAButton.addEventListener("click", function (e) {
+          window.location.href = "/";
+          // console.log(e)
+        });
+      }
+    
+      // var cTAButton1 = document.getElementById("cTAButton1");
+      // if (cTAButton1) {
+      //   cTAButton1.addEventListener("click", function (e) {
+      //     // window.location.href = "/";
+      //     console.log(e)
+      //   });
+      // }
+
+      </script>
+  </body>
+</html>

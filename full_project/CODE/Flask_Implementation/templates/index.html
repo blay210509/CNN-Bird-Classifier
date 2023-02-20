@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title></title>
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/global.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="frame-div">
+      <div class="bird-identifier-div" data-animate-on-scroll>
+        <p class="bird-p">BIRD</p>
+        <p class="identifier-p">IDENTIFIER</p>
+      </div>
+      <button class="cta-button" id="cTAButton">
+        <b class="label">Start </b></button
+      ><button class="cta-button1"><b class="label1">HOME</b></button
+      ><b class="team133-b">#team133</b
+      ><img
+        class="bird-front-1"
+        alt=""
+        src="static/public/bird-front-1@2x.png"
+        data-animate-on-scroll
+      />
+    </div>
+
+    <script>
+      var cTAButton = document.getElementById("cTAButton");
+      if (cTAButton) {
+        cTAButton.addEventListener("click", function (e) {
+          window.location.href = "uploader";
+        });
+      }
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>

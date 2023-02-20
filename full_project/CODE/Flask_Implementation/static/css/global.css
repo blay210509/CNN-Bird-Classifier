@@ -1,0 +1,24 @@
+:root {
+  /* fonts */
+  --font-mulish: Mulish;
+  --font-ubuntu: Ubuntu;
+
+  /* font sizes */
+  --font-size-base: 14px;
+  --font-size-lg: 20px;
+  --font-size-xl: 22px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-indigo-100: #483ea8;
+  --color-gray-100: #0f0f0f;
+
+  /* Paddings */
+  --padding-xs: 8px;
+  --padding-sm: 9px;
+  --padding-md: 10px;
+  --padding-lg: 14px;
+
+  /* border radiuses */
+  --br-md: 4px;
+}
